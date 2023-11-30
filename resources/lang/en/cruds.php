@@ -204,8 +204,8 @@ return [
         'title_singular' => 'Quản Lý Giải Robotic',
     ],
     'scoreDetail' => [
-        'title'          => 'Score Detail',
-        'title_singular' => 'Score Detail',
+        'title'          => 'Chi tiết trận đấu',
+        'title_singular' => 'Chi tiết trận đấu',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => ' ',
@@ -262,8 +262,8 @@ return [
         ],
     ],
     'matchTeam' => [
-        'title'          => 'Chi tiết trận',
-        'title_singular' => 'Chi tiết trận',
+        'title'          => 'Đội tham gia vào trận đấu',
+        'title_singular' => 'Đội tham gia vào trận đấu',
         'fields'         => [
             'id'                  => 'ID',
             'id_helper'           => ' ',

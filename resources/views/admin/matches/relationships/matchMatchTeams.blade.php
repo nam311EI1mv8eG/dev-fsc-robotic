@@ -94,7 +94,7 @@
                                             {{ $matchTeam->team->name ?? '' }}
                                         </td>
                                         <td>
-                                            {{ $matchTeam->alliance ?? '' }}
+                                            {{ $matchTeam->alliance ==1 ? 'Đỏ' : 'Xanh' }}
                                         </td>
                                         <td>
                                             <span style="display:none">{{ $matchTeam->is_availaibe ?? '' }}</span>

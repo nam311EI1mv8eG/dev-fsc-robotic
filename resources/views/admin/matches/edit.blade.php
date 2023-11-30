@@ -75,6 +75,56 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.match.fields.n_o_helper') }}</span>
                         </div>
+                        
+                        <div class="form-group {{ $errors->has('team') ? 'has-error' : '' }}">
+                            <h3>Liên Minh Đỏ</h3>
+                            <label class="required" for="team_id">Đội đỏ 1</label>
+                            <select class="form-control select2" name="team_1_1_id" id="team_1_1_id" required>
+                                @foreach($teams as $id => $entry)
+                                    <option value="{{ $id }}" {{ (old('team_1_1_id') ? old('team_1_1_id') : $team_1_1_id ?? '') == $id ? 'selected' : '' }}>{{ $entry }}</option>
+                                @endforeach
+                            </select>
+                            @if($errors->has('season'))
+                                <span class="help-block" role="alert">{{ $errors->first('team') }}</span>
+                            @endif
+                             <label class="required" for="team_id">Đội đỏ 2</label>
+                            <select class="form-control select2" name="team_1_2_id" id="team_1_1_id" required>
+                                @foreach($teams as $id => $entry)
+                                    <option value="{{ $id }}"  {{ (old('team_1_2_id') ? old('team_1_2_id') : $team_1_2_id ?? '') == $id ? 'selected' : '' }} >{{ $entry }}</option>
+                                @endforeach
+                            </select>
+                            @if($errors->has('season'))
+                                <span class="help-block" role="alert">{{ $errors->first('team') }}</span>
+                            @endif
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group {{ $errors->has('team') ? 'has-error' : '' }}">
+                            <h3>Liên Minh Xanh</h3>
+                            <label class="required" for="team_id">Đội xanh 1</label>
+                            <select class="form-control select2" name="team_2_1_id" id="team_2_1_id" required>
+                                @foreach($teams as $id => $entry)
+                                    <option value="{{ $id }}"  {{ (old('team_2_1_id') ? old('team_2_1_id') : $team_2_1_id ?? '') == $id ? 'selected' : '' }} >{{ $entry }}</option>
+                                @endforeach
+                            </select>
+                            @if($errors->has('season'))
+                                <span class="help-block" role="alert">{{ $errors->first('team') }}</span>
+                            @endif
+                             <label class="required" for="team_id">Đội xanh 2</label>
+                            <select class="form-control select2" name="team_2_2_id" id="team_2_2_id" required>
+                                @foreach($teams as $id => $entry)
+                                    <option value="{{ $id }}"  {{ (old('team_2_2_id') ? old('team_2_2_id') : $team_2_2_id ?? '') == $id ? 'selected' : '' }}>{{ $entry }}</option>
+                                @endforeach
+                            </select>
+                           
+                                @if(session()->has('message'))
+                                    <div class="alert alert-success">
+                                    {{ session()->get('message') }}
+                                    </div>
+                              @endif
+
+
+                        </div>
+                        
                         <div class="form-group">
                             <button class="btn btn-danger" type="submit">
                                 {{ trans('global.save') }}

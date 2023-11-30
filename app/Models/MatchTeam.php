@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class MatchTeam extends Model  {
 
 use SoftDeletes, Auditable, HasFactory;
+//use  Auditable, HasFactory;
 
 public $table = 'match_teams';
 
