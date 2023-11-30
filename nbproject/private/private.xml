@@ -6,7 +6,9 @@
             <file>file:/D:/phpstudy_pro/WWW/LaravelProjects/dev-fsc12-robotic/resources/views/admin/matches/relationships/matchMatchTeams.blade.php</file>
             <file>file:/D:/phpstudy_pro/WWW/LaravelProjects/dev-fsc12-robotic/app/Http/Controllers/Admin/MatchController.php</file>
             <file>file:/D:/phpstudy_pro/WWW/LaravelProjects/dev-fsc12-robotic/app/Models/MatchTeam.php</file>
+            <file>file:/D:/phpstudy_pro/WWW/LaravelProjects/dev-fsc12-robotic/app/Http/Controllers/Api/V1/Admin/SeasonApiController.php</file>
             <file>file:/D:/phpstudy_pro/WWW/LaravelProjects/dev-fsc12-robotic/resources/views/admin/matches/edit.blade.php</file>
+            <file>file:/D:/phpstudy_pro/WWW/LaravelProjects/dev-fsc12-robotic/app/Http/Controllers/Api/V1/Admin/MatchApiController.php</file>
         </group>
     </open-files>
 </project-private>

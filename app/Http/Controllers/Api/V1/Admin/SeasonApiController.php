@@ -15,7 +15,7 @@ class SeasonApiController extends Controller
 {
     public function index()
     {
-        abort_if(Gate::denies('season_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+//        abort_if(Gate::denies('season_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         return new SeasonResource(Season::all());
     }
@@ -31,7 +31,7 @@ class SeasonApiController extends Controller
 
     public function show(Season $season)
     {
-        abort_if(Gate::denies('season_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+//        abort_if(Gate::denies('season_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         return new SeasonResource($season);
     }
@@ -47,7 +47,7 @@ class SeasonApiController extends Controller
 
     public function destroy(Season $season)
     {
-        abort_if(Gate::denies('season_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+//        abort_if(Gate::denies('season_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $season->delete();
 

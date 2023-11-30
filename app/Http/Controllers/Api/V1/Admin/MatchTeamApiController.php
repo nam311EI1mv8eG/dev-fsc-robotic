@@ -15,7 +15,7 @@ class MatchTeamApiController extends Controller
 {
     public function index()
     {
-        abort_if(Gate::denies('match_team_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+    //    abort_if(Gate::denies('match_team_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         return new MatchTeamResource(MatchTeam::with(['match', 'team'])->get());
     }
@@ -31,7 +31,7 @@ class MatchTeamApiController extends Controller
 
     public function show(MatchTeam $matchTeam)
     {
-        abort_if(Gate::denies('match_team_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+       // abort_if(Gate::denies('match_team_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         return new MatchTeamResource($matchTeam->load(['match', 'team']));
     }
@@ -47,7 +47,7 @@ class MatchTeamApiController extends Controller
 
     public function destroy(MatchTeam $matchTeam)
     {
-        abort_if(Gate::denies('match_team_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+      //  abort_if(Gate::denies('match_team_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $matchTeam->delete();
 
