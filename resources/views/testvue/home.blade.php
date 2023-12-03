@@ -9,10 +9,12 @@
 
                 <div class="card-body">
                     hello there
-                       <example-component></example-component>
+                    
 
                     <component-a></component-a>
-                    <ComponentA></ComponentA>
+                 <cal-score></cal-score>
+                    <example-component></example-component>
+                    <component-b></component-b>
                 </div>
             </div>
         </div>

@@ -45,6 +45,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('matches/parse-csv-import', 'MatchController@parseCsvImport')->name('matches.parseCsvImport');
     Route::post('matches/process-csv-import', 'MatchController@processCsvImport')->name('matches.processCsvImport');
     Route::resource('matches', 'MatchController');
+    Route::get('matches/calculate-score/{match}', 'MatchController@calculateScore')->name('matches.calculateScore');
+    Route::post('matches/send-score', 'MatchController@sendScore')->name('matches.sendScore');
+
+    
 
     // Score Detail
     Route::delete('score-details/destroy', 'ScoreDetailController@massDestroy')->name('score-details.massDestroy');

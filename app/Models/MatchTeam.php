@@ -14,6 +14,7 @@ use SoftDeletes, Auditable, HasFactory;
 //use  Auditable, HasFactory;
 
 public $table = 'match_teams';
+public $with = ['team'];
 
 protected $dates = [
 'created_at',

@@ -25,7 +25,7 @@
 </head>
 
 <body class="sidebar-mini skin-purple" style="height: auto; min-height: 100%;">
-    <div class="wrapper" style="height: auto; min-height: 100%;">
+    <div class="wrapper" style="height: auto; min-height: 100%;" id="app">
         <header class="main-header">
             <a href="#" class="logo">
                 <span class="logo-mini"><b>{{ trans('panel.site_title') }}</b></span>
@@ -118,6 +118,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
     <script>
         $(function() {
   let copyButtonTrans = '{{ trans('global.datatables.copy') }}'

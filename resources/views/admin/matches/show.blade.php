@@ -87,6 +87,9 @@
                             <a class="btn btn-default" href="{{ route('admin.matches.index') }}">
                                 {{ trans('global.back_to_list') }}
                             </a>
+                                <a class="btn btn-lg btn-primary" href="{{ route('admin.matches.calculateScore', $match->id) }}">
+                                                    Vào trận đấu
+                                </a>
                         </div>
                     </div>
                 </div>
