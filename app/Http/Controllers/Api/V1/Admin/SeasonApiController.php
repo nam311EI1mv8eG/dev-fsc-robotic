@@ -44,7 +44,8 @@ class SeasonApiController extends Controller
     public function show(Season $season)
     {
 //        abort_if(Gate::denies('season_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        $season->load('seasonMatches', 'seasonTeams');
+        $season->load('seasonMatches', 'seasonTeams'); 
+        
         return new SeasonResource($season);
     }
 
