@@ -61,4 +61,14 @@ return $this->belongsTo(Team::class, 'team_id');
     
 }
 
+ public function scopeRedteam($query) {
+        return $query->where('alliance','=', 1);
+    }
+ public function scopeBlueteam($query) {
+        return $query->where('alliance','=', 2);
+    }
+ 
+
+    
+    
 }

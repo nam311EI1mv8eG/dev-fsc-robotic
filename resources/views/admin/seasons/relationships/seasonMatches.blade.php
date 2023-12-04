@@ -72,10 +72,37 @@
                                             {{ $match->time ?? '' }}
                                         </td>
                                         <td>
-                                            {{ $match->red_score ?? '' }}
+                                            {{ $match->red_score ?? '' }}  <br>
+                                            <span style="font-size: 10px;font-weight: bold;background-color: yellow;">
+                                           <?php  //echo  $match->matchMatchTeams()->redteam()->get();
+//                                                $matchMatchTeams = App\Models\MatchTeam::with('products' => function($query) {
+//                                                        $query->where('isGlobal', 1);
+//                                                    })->get();
+                                           foreach ($match->matchMatchTeams()->redteam()->get() as $t) {
+                                               echo $t->team->name ."  -  ";
+                                           }
+                                           
+                                           ?>
+                                            </span>
+<!--                                            @foreach ($match->matchMatchTeams()->redteam()->get() as $r_t)
+                                                    <span>{{$r_t->name}} - </span>
+                                                    
+                                                  @endforeach-->
                                         </td>
                                         <td>
                                             {{ $match->blue_score ?? '' }}
+                                            <br>
+                                            <span style="font-size: 10px;font-weight: bold;background-color: yellow;">
+                                           <?php  //echo  $match->matchMatchTeams()->redteam()->get();
+//                                                $matchMatchTeams = App\Models\MatchTeam::with('products' => function($query) {
+//                                                        $query->where('isGlobal', 1);
+//                                                    })->get();
+                                           foreach ($match->matchMatchTeams()->blueteam()->get() as $t) {
+                                               echo $t->team->name ."  -  ";
+                                           }
+                                           
+                                           ?>
+                                            </span>
                                         </td>
                                         <td>
                                             <span style="display:none">{{ $match->is_finished ?? '' }}</span>
