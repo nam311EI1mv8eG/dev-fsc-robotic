@@ -47,7 +47,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('matches', 'MatchController');
     Route::get('matches/calculate-score/{match}', 'MatchController@calculateScore')->name('matches.calculateScore');
     Route::post('matches/send-score', 'MatchController@sendScore')->name('matches.sendScore');
-
+    Route::post('matches/finished-matched/{match}', 'MatchController@finishedMatch')->name('matches.finishedMatch');
     
 
     // Score Detail

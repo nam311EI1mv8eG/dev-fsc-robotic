@@ -75,6 +75,12 @@ public function sendScore(Request $request)
     return ['status' => 'Message Sent!'];
 }
 
+public function finishedMatch(Match $match)
+{
+    $match->is_finished = 1;
+    $match->update();
+    return redirect()->route('admin.matches.calculateScore', $match->id);
+}
 
 function create()
 {
